@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-native/Libraries/ReactNative/PaperUIManager.js b/node_modules/react-native/Libraries/ReactNative/PaperUIManager.js
+index c468958..cbbf950 100644
+--- a/node_modules/react-native/Libraries/ReactNative/PaperUIManager.js
++++ b/node_modules/react-native/Libraries/ReactNative/PaperUIManager.js
+@@ -34,6 +34,7 @@ function getConstants(): Object {
+ function getViewManagerConfig(viewManagerName: string): any {
+   if (
+     viewManagerConfigs[viewManagerName] === undefined &&
++    global.nativeCallSyncHook &&
+     NativeUIManager.getConstantsForViewManager
+   ) {
+     try {
